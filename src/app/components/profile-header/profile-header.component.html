@@ -1,0 +1,10 @@
+
+<div class="app-profif-header">
+  <app-icon class="app-icon" slot="start" imgUrl="assets/icon/back-svgrepo-com.svg" [zoom]="2.5" (click)="goBack()"></app-icon>
+  <ion-label class="app-profil-title">
+    <ng-content></ng-content>
+  </ion-label>
+  <div class="app-profil-round">
+    <app-icon slot="start" imgUrl="assets/icon/user.svg" [zoom]="4"></app-icon>
+  </div>
+</div>

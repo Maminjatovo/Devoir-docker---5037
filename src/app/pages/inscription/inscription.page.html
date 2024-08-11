@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ion-toolbar">
+    <ion-buttons slot="start">
+      <div class="app-profil-round">
+        <app-icon slot="start" class="app-icon" imgUrl="assets/icon/back-svgrepo-com.svg" [zoom]="2" (click)="goBack()"></app-icon>
+      </div>    
+    </ion-buttons>
+    <ion-title>Création de compte</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding ion-align-items-center">
+  <ion-grid class="app-login">
+    <ion-row class="ion-justify-content-center">  
+      <app-logo class="app-logo-login" [applyCustomStyle]="applyCustomStyle"></app-logo>
+    </ion-row>
+    <ion-row>
+      <ion-input class="ion-margin-top" label="Nom" label-placement="floating" fill="outline" 
+        size="small" [(ngModel)]="nom"></ion-input>
+      <ion-input class="ion-margin-top" label="Prenom" label-placement="floating" fill="outline"
+        [(ngModel)]="prenom"></ion-input>
+      <ion-input class="ion-margin-top" label="Numero d'enregistrement" label-placement="floating" fill="outline"
+       size="small" [(ngModel)]="numero"></ion-input>
+      <ion-input class="ion-margin-top" label="Telephone" label-placement="floating" fill="outline" 
+        size="small" [(ngModel)]="telephone"></ion-input>
+      <ion-input class="ion-margin-top" label="Email" label-placement="floating" fill="outline"
+        size="small" [(ngModel)]="email"></ion-input>
+        <br>
+        <br>
+      <app-simple-button style="flex: 1" size="large" [isButtonLg]="isButtonLg" (click)="inscription()">
+        ENREGISTRER
+      </app-simple-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

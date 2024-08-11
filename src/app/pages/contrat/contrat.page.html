@@ -1,0 +1,23 @@
+<ion-content class="cont1">
+  <app-header></app-header>
+  <app-image-header>CONTRAT</app-image-header>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card *ngIf="loading">
+  </ion-card>
+  <div class="app-contrat-item-container">
+    <ion-card *ngFor="let contrat of contrats" class="card2" (click)="openDocumentPage(contrat.id)">
+      <ion-card-content>
+        <ion-item lines="none" class="card2">
+          <ion-label>
+            <h3 class="app-first-text">{{ contrat.title }}</h3>
+            <p class="app-second-text">{{ contrat.creation_date }}</p>
+            <!-- <p class="app-second-text">{{ contrat.numero }}</p>-->
+          </ion-label>
+        </ion-item>
+        <app-triangle-color></app-triangle-color>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

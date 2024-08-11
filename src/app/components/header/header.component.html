@@ -1,0 +1,22 @@
+<ion-header [translucent]="true" class="app-header">
+  <ion-toolbar>
+    <div class="toolbar">
+      <ion-img [src]="logoUrl" alt="Nouveau Logo" style="width: 75px"></ion-img>
+    </div>
+  </ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-toolbar class="toolbar1">
+          <app-menu-toggle></app-menu-toggle>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col>
+        <app-button style="flex: 1" size="large" [isButtonLg]="true" routerLink="/contact">
+          CONTACTEZ-NOUS
+        </app-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>

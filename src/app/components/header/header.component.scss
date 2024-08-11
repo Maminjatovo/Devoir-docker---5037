@@ -1,0 +1,50 @@
+ion-header.app-header {
+  box-shadow: 0 0 0 0;
+  -webkit-box-shadow: 0 0 0 0;
+}
+
+ion-button.header-btn-contact {
+  --background: #19A4BD;
+  /* Couleur personnalisée pour le fond du bouton */
+  --color: white;
+  /* Couleur du texte */
+  --background-hover: #9ce0be;
+  --background-activated: #88f4be;
+  --background-focused: #88f4be;
+  --border-radius: 8px;
+  --border-color: #0b81b5;
+  --border-style: solid;
+  --border-width: 1px;
+  --box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  --ripple-color: deeppink;
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+ion-button.custombutton {
+  --ion-color-base: #FF5733;
+  /* Change la couleur de base du bouton */
+  --ion-color-base-rgb: 255, 87, 51;
+  /* Définit la couleur de base sous forme de RGB */
+
+}
+
+.ion-menu::part(backdrop) {
+  background-color: rgba(2, 184, 234, 0.52);
+}
+
+.ion-menu::part(container) {
+  border-radius: 0 20px 20px 0;
+
+  box-shadow: 4px 0px 16px rgba(8, 130, 132, 0.948);
+}
+
+.toolbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+

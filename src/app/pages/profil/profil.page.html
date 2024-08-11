@@ -1,0 +1,8 @@
+
+<ion-content class="cont1">
+  <app-profile-header> {{title}} </app-profile-header>
+  <ion-list class="ion-padding">
+    <app-profile-item *ngFor="let item of profils" [text]="item.text" [icon]="item.icon"
+      [value]="item.value"></app-profile-item>
+  </ion-list>
+</ion-content>

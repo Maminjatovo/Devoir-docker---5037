@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Image</ion-title>
+    <ion-button fill="outline" color="medium" (click)="closeModal()" slot="end">
+      <app-icon slot="start" imgUrl="assets/icon/close.svg" [zoom]="1.5"></app-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img *ngIf="imageDataUrl" class="app-img-doc" [src]="fileUrl + imageDataUrl" alt="Image générée"></ion-img>
+</ion-content>

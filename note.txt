@@ -1,0 +1,2 @@
+npm install pdfmake //convertir text to pdf
+npm install html2canvas// convertir text to

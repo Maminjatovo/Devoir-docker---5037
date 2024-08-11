@@ -1,0 +1,24 @@
+<ion-content class="ion-padding ion-align-items-center">
+  <ion-grid class="app-login">
+    <ion-row class="ion-justify-content-center">
+      <app-logo class="app-logo-login" [applyCustomStyle]="applyCustomStyle"></app-logo>
+    </ion-row>
+    <ion-row>
+      <ion-input class="ion-margin-top" label="Numero d'enregistrement" label-placement="floating" fill="outline"
+        size="small" [(ngModel)]="numero"></ion-input>
+
+      <!--<ion-input class="ion-margin-top" label="Telephone" label-placement="floating" fill="outline"
+        [(ngModel)]="telephone" style="margin-bottom: 20px" (ngModelChange)="ajouterIndicatifPays($event)"></ion-input> -->
+
+        <ion-input class="ion-margin-top" label="Telephone" label-placement="floating" fill="outline"
+        [(ngModel)]="telephone" style="margin-bottom: 20px"></ion-input>
+
+      <app-simple-button style="flex: 1; " size="large" [isButtonLg]="isButtonLg" (click)="connection()">
+        SE CONNECTER
+      </app-simple-button>
+      <app-button style="flex: 1" size="large" [isButtonLg]="isButtonLg" routerLink="/inscription">
+        CREE UN COMPTE
+      </app-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

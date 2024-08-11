@@ -1,0 +1,29 @@
+<ion-menu contentId="main-content" class="menu1">
+  <ion-header class="ion-no-border">
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-padding-top">
+          <ion-img [src]="imageUrl" alt="img-logo" class="img"></ion-img>
+        </ion-col>
+        <ion-col>
+          <ion-row class="ion-justify-content-end">
+            <ion-menu-toggle class="menu1">
+              <ion-button fill="outline" color="medium">
+                <app-icon slot="start" imgUrl="assets/icon/close.svg" [zoom]="1.5"></app-icon>
+              </ion-button>
+            </ion-menu-toggle>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-header>
+  <ion-content class="app-content-menu ion-padding-top">
+    <ion-list lines="none">
+      <ion-menu-toggle>
+        <app-link-item *ngFor="let item of paths"  [routerLink]="item.url">{{ item.name }}</app-link-item>
+        <div class="custom-button" (click)="presentAlert()">DECONNECTER</div>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content"></div>

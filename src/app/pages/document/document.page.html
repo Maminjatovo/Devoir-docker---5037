@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar class="toolbar1">
+    <ion-buttons slot="start">
+      <div class="app-profil-round">
+        <app-icon
+          slot="start"
+          class="app-icon"
+          imgUrl="assets/icon/back-svgrepo-com.svg"
+          [zoom]="2"
+          (click)="goBack()"
+        ></app-icon>
+      </div>
+    </ion-buttons>
+    <ion-title>DOCUMENTS</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="cont1">
+ 
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <div #textRef>
+    <!-- Contenu que vous souhaitez convertir en image -->
+    <p></p>
+  </div>
+  <ion-card *ngFor="let document of documents" class="card2">
+    <ion-card-content>
+      <ion-row>
+        <ion-col>
+          <ion-item lines="none" class="card2">
+            <ion-label class="card2">
+              <h3 class="app-first-text">{{ document.titre }}</h3>
+              <p class="app-second-text">{{ document.type }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col style="display: flex" size="auto" class="ion-text-center">
+          <div class="" style="width: 150px; display: flex">
+            <ion-button *ngIf="document.type === 'pdf'" fill="clear">
+              <app-icon imgUrl="assets/icon/pdf.svg" [zoom]="2.5"></app-icon>
+            </ion-button>
+            <ion-button
+              *ngIf="document.type !== 'pdf'"
+              fill="clear"
+              (click)="voirImage(document.path)"
+            >
+              <app-icon imgUrl="assets/icon/image.svg" [zoom]="2.5"></app-icon>
+            </ion-button>
+            <ion-button fill="clear">
+              <app-icon
+                imgUrl="assets/icon/download.svg"
+                [zoom]="2.5"
+              ></app-icon>
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+    <app-triangle-color></app-triangle-color>
+  </ion-card>
+</ion-content>
+<div class="app-btn-fixed" (click)="takePicture()">
+  <app-icon imgUrl="assets/icon/add.svg" [zoom]="2.5"></app-icon>
+</div>

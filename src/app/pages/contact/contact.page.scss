@@ -1,0 +1,61 @@
+ion-content#contact {
+  --background: #f7f7f7;
+}
+
+ion-list.contact1 {
+  box-shadow: 0px 10px 25px 0px rgba(25, 54, 86, 0.07);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: #f7f7f7;
+}
+
+.input {
+  margin-top: 10px;
+}
+
+
+
+ion-list.contact2 {
+  box-shadow: 0px 10px 25px 0px rgba(25, 54, 86, 0.07);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+ion-item.app-contact-item {
+  --background: #f7f7f7;
+}
+
+.app-contact-first {
+  --background: red;
+}
+
+.app-first-text {
+  color: rgb(4, 112, 177);
+  font-weight: 600 !important;
+  letter-spacing: -0.54px;
+}
+
+.app-second-text {
+  color: #7f99bb;
+  font-weight: 500;
+  letter-spacing: -0.54px;
+}
+
+.app-contact-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+ion-input.input-label,ion-textarea.input-label{
+  --border-color: #92C1DD;
+  --border-radius: 4px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}

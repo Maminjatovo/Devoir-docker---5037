@@ -1,0 +1,15 @@
+.app-color-triangle {
+  height: 30px;
+  width: 30px;
+  background-image: linear-gradient(300deg,
+      var(--e-global-color-primary) 0%,
+      var(--e-global-color-accent) 100%);
+  //background: transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  transform: translate(50%, 50%) rotate(45deg);
+
+}
+

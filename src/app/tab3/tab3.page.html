@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar collapse="condense">
+    <ion-title size="large">ngx-extended-pdf-viewer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ngx-extended-pdf-viewer
+    [src]="url"
+  ></ngx-extended-pdf-viewer>
+  <ngx-extended-pdf-viewer
+    [base64Src]="base64"
+  ></ngx-extended-pdf-viewer>
+</ion-content>

@@ -1,0 +1,64 @@
+
+.custom-button {
+  --background: transparent; /* Couleur de fond transparente */
+  --background-activated-opacity: 0;
+    --background-focused-opacity: 0;
+    --background-hover-opacity: 0;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+}
+.app-first-text {
+  color: rgb(4, 112, 177);
+  font-weight: 600 !important;
+  letter-spacing: -0.54px;
+}
+.app-second-text {
+  color: #7f99bb;
+  font-weight: 500;
+  letter-spacing: -0.54px;
+  font-size: 15px;
+}
+
+ion-card.card2 {
+  --background:  #f7f7f7;
+  --color: #ffc69e;
+}
+ion-item.card2{
+  --background:  #f7f7f7;
+}
+
+.app-btn-fixed{
+  height: 50px;
+  width: 50px;
+ // background-color: red;
+  position: absolute;
+  z-index: 1000;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:  all 0.5s ease;
+
+}
+
+.app-btn-fixed:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.app-btn-fixed:active{
+  transform: scale(1);
+ //transform: rotate(180deg)
+}
+
+
+@media (prefers-color-scheme: dark) {
+  ion-content.cont1 {
+    --ion-background-color: #ffffff;
+    --ion-item-background: #ffffff;
+    --ion-tab-bar-background: #ffffff;
+    
+  }
+}
+ 

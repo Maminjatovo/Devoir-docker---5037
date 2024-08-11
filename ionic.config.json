@@ -1,0 +1,7 @@
+{
+  "name": "assurances-f2l",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

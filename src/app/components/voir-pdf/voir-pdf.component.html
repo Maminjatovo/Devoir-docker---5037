@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Pdf</ion-title>
+    <ion-button fill="outline" color="medium" slot="end"> </ion-button>
+  </ion-toolbar>
+</ion-header>
+<div class="fileUploadDiv">
+  <label for="formFile" class="form-label"> Please Select File:</label>
+  <ion-input class="form-control" type="file" id="upload-doc" accept=".pdf" (change)="onFileSelected($event)" />
+  <!-- (change)="uploadFile($event)" -->
+  <div *ngIf="isPdfUploaded" class="button-div">
+    <div class="page-div">
+      <ion-button (click)="previous()" class="btn btn-success">
+        <i class="fa fa-angle-left font-weight-bold" aria-hidden="true"></i>
+      </ion-button>
+      <p class="pagescount">Pages - {{currentpage}} of {{totalPages}}</p>
+      <ion-button (click)="next()" class="btn btn-success">
+        <i class="fa fa-angle-right font-weight-bold" aria-hidden="true"></i>
+      </ion-button>
+    </div>
+    <ion-button (click)="crop()" class="btn btn-warning button-margin" data-toggle="tooltip" data-placement="top"
+      title="Crop">
+      <i class="fa fa-crop" aria-hidden="true"></i>
+    </ion-button>
+
+    <ion-button (click)="zoomIn()" data-toggle="tooltip" data-placement="top" title="Zoom In" *ngIf="isCropImage"
+      class="btn btn-light button-margin">
+      <i class="fa fa-search-plus" aria-hidden="true"></i>
+    </ion-button>
+
+    <input *ngIf="isCropImage" data-toggle="tooltip" data-placement="top" title="Crop" type="range" min="0.1" max="1"
+      step="0.1" class="slider button-margin" id="myRange" (change)="onRange($event)">
+
+    <ion-button (click)="zoomOut()" data-toggle="tooltip" data-placement="top" title="Zoom Out" *ngIf="isCropImage"
+      class="btn btn-light button-margin">
+      <i class="fa fa-search-plus" aria-hidden="true"></i>
+    </ion-button>
+    <ion-button (click)="onRotate()" data-toggle="tooltip" data-placement="top" title="Rotate" *ngIf="isCropImage"
+      class="btn btn-warning button-margin"><i class="fa fa-refresh" aria-hidden="true"></i>
+    </ion-button>
+    <ion-button (click)="download()" class="btn btn-primary button-margin">Download</ion-button>
+    <ion-button (click)="reset()" data-toggle="tooltip" data-placement="top" title="Reset" *ngIf="isCropImage"
+      class="btn btn-danger button-margin"><i class="fa fa-undo" aria-hidden="true"></i></ion-button>
+  </div>
+</div>
+
+<div class="pdf-container top-margin" [hidden]="isCropImage">
+  <pdf-viewer src="https://www.codeur.com/tuto/wp-content/uploads/2022/02/pdf-test.pdf" [render-text]="true"
+    [page]="currentpage" [show-all]="false" [original-size]="true" [fit-to-page]="false"
+    (after-load-complete)="afterLoadComplete($event)" style="display: block;">
+  </pdf-viewer>
+</div>
+
+<div class="img-container" [hidden]="!isCropImage">
+  <ion-img #image src="" id="cropper-img" crossorigin />
+</div>
+<object type="application/pdf" data="http://localhost:8000/storage/filaka/test.pdf" width="100%" height="100%">
+  <p>Votre navigateur ne supporte pas l'affichage de PDF. Veuillez <a
+      href="http://localhost:8000/storage/filaka/test.pdf">télécharger le PDF</a> pour le voir.</p>
+</object>

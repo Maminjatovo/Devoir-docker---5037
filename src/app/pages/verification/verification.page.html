@@ -1,0 +1,25 @@
+
+  <ion-header [translucent]="true">
+    <ion-toolbar class="toolbar1">
+      <ion-buttons slot="start">
+        <div class="app-profil-round">
+          <app-icon slot="start" class="app-icon" imgUrl="assets/icon/back-svgrepo-com.svg" [zoom]="2" (click)="goBack()"></app-icon>
+        </div>
+       <!--<ion-back-button defaultHref="/login"></ion-back-button> --> 
+      </ion-buttons>
+      <ion-title>Code de verification</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="true" class="ion-padding ion-align-items-center">
+    <ion-grid class="app-login">
+      <ion-row>
+        <ion-input class="ion-margin-top" label="Code" label-placement="floating" fill="outline" size="small"
+          [(ngModel)]="code"></ion-input>
+        <br><br>
+        <app-simple-button class="button-container" style="flex: 1" size="large" [isButtonLg]="isButtonLg"
+          (click)="verification()">
+          VALIDER
+        </app-simple-button>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

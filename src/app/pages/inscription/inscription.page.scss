@@ -1,0 +1,23 @@
+@media (prefers-color-scheme: dark) {
+    ion-content {
+      --ion-background-color: #ffffff;
+      --ion-text-color: #222222; 
+      --ion-border-color: #ffffff;
+    }
+  
+    .app-login {
+      --ion-background-color: #ffffff; 
+
+      --ion-border-color: #ffffff; 
+    }
+  
+    .ion-margin-top {
+      --ion-text-color: #ffffff;
+    }
+
+    .ion-toolbar {
+        --ion-toolbar-background: #ffffff;
+        color: #121212; 
+      }
+  }
+  
